@@ -9,4 +9,9 @@ public enum Suit {
     private Suit(String suit) {
         this.suit = suit;
     }
+
+    @Override
+    public String toString() {
+        return this.suit;
+    }
 }

@@ -1,13 +1,22 @@
+package console.madcabbage.blackjack;
+
 import console.madcabbage.blackjack.BlackJackGame;
 import console.madcabbage.blackjack.card.Card;
 import console.madcabbage.blackjack.card.Suit;
 
+import java.util.Scanner;
+
 public class BlackJackMain {
 
-    private static BlackJackGame game;
-
     public static void main(String[] args) {
-        //game = new BlackJackGame();
-        Card card = new Card();
+        Scanner scan = new Scanner(System.in);
+        printWelcomeScreen();
+        System.out.print("Enter Name: ");
+        BlackJackGame game = new BlackJackGame(scan.nextLine()); scan.close();
+
+    }
+
+    private static void printWelcomeScreen() {
+        System.out.println("Welcome to MadJack's BlackJack table!\n\n");
     }
 }
